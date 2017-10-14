@@ -1,0 +1,8 @@
+name: Notice entity
+type: module
+description: Provides an entity type for displaying time-sensitive messages.
+core: 8.x
+package: Custom
+dependencies:
+  - block
+  - datetime_range

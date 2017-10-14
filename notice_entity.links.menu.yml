@@ -1,0 +1,14 @@
+
+# Notice menu items definition
+entity.notice.collection:
+  title: 'List Notices'
+  route_name: entity.notice.collection
+  description: 'List Notices'
+  parent: system.admin_structure
+  weight: 100
+
+notice.admin.structure.settings:
+  title: Notice settings
+  description: 'Configure Notices'
+  route_name: notice.settings
+  parent: system.admin_structure

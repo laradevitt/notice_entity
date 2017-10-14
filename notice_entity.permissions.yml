@@ -1,0 +1,19 @@
+add notice entities:
+  title: 'Create new Notice entities'
+
+administer notice entities:
+  title: 'Administer Notice entities'
+  description: 'Allow to access the administration form to configure Notice entities.'
+  restrict access: true
+
+delete notice entities:
+  title: 'Delete Notice entities'
+
+edit notice entities:
+  title: 'Edit Notice entities'
+
+view published notice entities:
+  title: 'View published Notice entities'
+
+view unpublished notice entities:
+  title: 'View unpublished Notice entities'

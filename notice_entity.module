@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * @file
+ * Contains notice_entity.module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_theme().
+ */
+function notice_entity_theme() {
+  return [
+    'notice_block_alert' => [
+      'template' => 'notice-block-alert',
+      'variables' => [],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_entity_operation_alter().
+ */
+function notice_entity_entity_operation_alter(array &$operations, EntityInterface $entity) {
+
+  // Surely we should be able to work the cloning stuff into the entity
+  // definition, here, but will have to make time for that later.
+  $entity_type_id = $entity->getEntityTypeId();
+  if ($entity_type_id !== 'notice') {
+    return;
+  }
+
+  if (!(\Drupal::currentUser()->hasPermission('add ' . $entity_type_id . ' entities'))) {
+    return;
+  }
+
+  $operations['clone'] = [
+    'title' => t('Clone'),
+    'url' => Url::fromRoute('entity.notice.clone_form', ['id' => $entity->id()]),
+    'weight' => '10.1',
+  ];
+}

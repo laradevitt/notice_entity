@@ -1,0 +1,23 @@
+{#
+/**
+ * @file notice-block-alert.html.twig
+ * Theme implementation to present a Notice alert.
+ *
+ * This template will be populated with JavaScript. The wrapping <div> is
+ * required, as well as two elements with class "name" and "text". Optionally
+ * include the button element if you want the user to be able to dismiss the
+ * alert when they click it. Remove the "do-dismiss" class if you don't want
+ * this module to hide the element (e.g., if you want Bootstrap or Foundation
+ * to handle it).
+ *
+ * @ingroup themeable
+ */
+#}
+
+<div data-notice-alert>
+  <h5 class="name"></h5>
+  <p class="text"></p>
+  <button class="do-dismiss" aria-label="Dismiss the alert" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>

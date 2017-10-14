@@ -1,0 +1,12 @@
+notice-entity:
+  js:
+    js/notice_entity.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+notice-entity-alerts:
+  js:
+    js/notice_entity.alerts.js: {}
+  dependencies:
+    - notice_entity/notice-entity
+    - core/jquery.cookie

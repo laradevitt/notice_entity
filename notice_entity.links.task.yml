@@ -1,0 +1,22 @@
+# Notice routing definition
+notice.settings_tab:
+  route_name: notice.settings
+  title: 'Settings'
+  base_route: notice.settings
+
+entity.notice.canonical:
+  route_name: entity.notice.canonical
+  base_route: entity.notice.canonical
+  title: 'View'
+
+entity.notice.edit_form:
+  route_name: entity.notice.edit_form
+  base_route: entity.notice.canonical
+  title: 'Edit'
+
+entity.notice.delete_form:
+  route_name:  entity.notice.delete_form
+  base_route:  entity.notice.canonical
+  title: Delete
+  weight: 10
+

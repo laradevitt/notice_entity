@@ -1,0 +1,23 @@
+# field.field.notice.notice.field_notice_daterange.yml
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.notice.field_notice_daterange
+  module:
+    - datetime_range
+    - notice_entity
+_core:
+  default_config_hash: NIN0eI8Fs3bsHs_L7UF2ErxFDZHTo7Aq2GDKcIT0yP0
+id: notice.notice.field_notice_daterange
+field_name: field_notice_daterange
+entity_type: notice
+bundle: notice
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

@@ -1,0 +1,22 @@
+# field.storage.notice.field_notice_daterange.yml
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime_range
+    - notice_entity
+_core:
+  default_config_hash: ezV5ApfDB6Lv6x1mrDfMK6l0wrgoCXz8xD0cyDGeVsE
+id: notice.field_notice_daterange
+field_name: field_notice_daterange
+entity_type: notice
+type: daterange
+settings:
+  datetime_type: date
+module: datetime_range
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

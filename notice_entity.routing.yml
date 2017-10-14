@@ -1,0 +1,19 @@
+entity.notice.clone_form:
+  path: 'admin/structure/notices/notice/{id}/clone'
+  defaults:
+    _controller: '\Drupal\notice_entity\Controller\NoticeCloneController::cloneForm'
+    _title_callback: '\Drupal\notice_entity\Controller\NoticeCloneController::clonePageTitle'
+  requirements:
+    _entity_create_access: 'notice'
+  options:
+    _node_operation_route: TRUE
+
+notice.api.get_notices_today:
+  path: 'api/notices/{date}'
+  defaults:
+    _controller: '\Drupal\notice_entity\Controller\NoticeRestController::getNoticesToday'
+  methods: [GET]
+  requirements:
+    _access: 'TRUE'
+  options:
+    no_cache: TRUE

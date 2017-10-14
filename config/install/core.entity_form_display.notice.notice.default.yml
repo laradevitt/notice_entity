@@ -1,0 +1,41 @@
+# core.entity_form_display.notice.notice.default.yml
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.notice.notice.field_notice_daterange
+    - field.field.notice.notice.field_notice_text
+  module:
+    - datetime_range
+    - notice_entity
+_core:
+  default_config_hash: wgeu-fFG4ELWiQ-lrbBHcL93idaEKTgwG8QP230sYCo
+id: notice.notice.default
+targetEntityType: notice
+bundle: notice
+mode: default
+content:
+  field_notice_daterange:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_notice_text:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  user_id: true
